@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import Logo from "./img/logo.png"
-import Home from "./img/rickandmorty.png"
+import Logo from "./img/logo.png";
+import Home from "./img/rickandmorty.png";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 
@@ -22,7 +22,7 @@ function App() {
   }, [api]);
 
   return (
-    <div className="App">
+    <div style={{ backgroundColor: "#181818" }} className="App">
       <img src={Logo} alt="Logo" width="80" height="40" title="Logo" />
       <center>
       <img src={Home} alt="Rick and Morty" width="250" height="250" title="Rick and Morty" />
@@ -35,7 +35,7 @@ function App() {
           </div>
              <div className="col-8">
                <div className="row">
-                <Cards />
+                <Cards results={results}/>
                </div>
              </div>
        </div>     

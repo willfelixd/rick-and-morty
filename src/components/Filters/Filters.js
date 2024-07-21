@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
+import styles from "./Cards.module.scss";
 
 const Filters = () => {
   return (
-    <div>Filters</div>
+    <div className={`${styles.nameLoc}`}>Filters</div>
   )
 }
 
