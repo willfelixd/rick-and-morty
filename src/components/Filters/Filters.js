@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Cards.module.scss";
+import styles from "./Filters.module.scss";
 
 const Filters = () => {
   return (
