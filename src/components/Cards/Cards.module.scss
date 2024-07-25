@@ -1,7 +1,8 @@
 .cards{
-    border: 2px solid #319344;
+    border: 2px solid #12b0c9;
     border-radius: 10px;
     background-color: #2c2c2c;
+    box-shadow: 1px 3px 6px rgba($color: #319344, $alpha: 0.50);
 }
 
 @font-face {
@@ -10,9 +11,16 @@
 }
 
 .name{
-    color: #12b0c9;
+    color: #2c2c2c;
     font-family: schwifty;
     font-style: initial;
+    border: 2px solid  #12b0c9;
+    border-radius: 12px;
+    background-color: #fdfdfd;
+    padding: 6px 12px;
+}
+.nameBlue{
+    color: #12b0c9; 
 }
 
 .nameLoc{

@@ -13,7 +13,7 @@ const Cards = ({results}) => {
         <div className={styles.cards}>
           <img src={image} alt="" className={`${styles.img} img-fluid`} />
           <div style={{ padding: "10px" }}className="content">
-            <div className={`${styles.name} fs-4 fw-bold mb-1`}>{name}</div>
+            <div className={`${styles.name} fs-4 fw-bold d-flex justify-content-center mb-1`}>{name}</div>
             <div className="">
               <div className={`${styles.nameLoc} fs-6`}>Género: {gender}</div>
             </div>

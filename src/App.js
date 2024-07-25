@@ -7,14 +7,16 @@ import Home from "./img/nave.png";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
+import Search from "./components/Search/Search";
 
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
+  let [search, setSearch] = useState("");
 
   let [fetchedData, updateFetchedData] = useState([]);
   let { info, results } = fetchedData;
 
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
 
   useEffect (() => {
     (async function () {
@@ -30,6 +32,8 @@ function App() {
       <img src={Home} alt="nave" width="230" height="225" title="nave" />
       </center>
 
+      <Search setPageNumber={setPageNumber} setSearch={setSearch} />
+
       <div className="container">
         <div className="row">
           <div className="col-3">
@@ -43,7 +47,7 @@ function App() {
        </div>     
       </div>
 
-      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber}/>
+      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
     </div>
   );
 }
