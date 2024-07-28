@@ -15,7 +15,7 @@ const Cards = ({results}) => {
           <div style={{ padding: "10px" }}className="content">
             <div className={`${styles.name} fs-4 fw-bold d-flex justify-content-center mb-1`}>{name}</div>
             <div className="">
-              <div className={`${styles.nameLoc} fs-6`}>Género: {gender}</div>
+                 <div className={`${styles.nameLoc} fs-6`}>Género: {gender}</div>
             </div>
             <div className="">
               <div className={`${styles.nameLoc} fs-6`}>Espécie: {species}</div>
@@ -27,31 +27,53 @@ const Cards = ({results}) => {
         </div>
         {(() => {
           if(status === "Dead"){
+            if(gender === "Male"){
             return(
               <div className={`${styles.badge} position-absolute badge bg-secondary`}>
-          {status}
+                 {status = "Morto"}
                </div>
-            );
+            );} else if(gender === "Female"){
+                return(
+                  <div className={`${styles.badge} position-absolute badge bg-secondary`}>
+                     {status = "Morta"}
+                  </div>
+                );} else{
+                    return(
+                      <div className={`${styles.badge} position-absolute badge bg-primary`}>
+                         {status = "Desconhecido"}
+                      </div>
+                    );}
+
           } else if(status === "Alive"){
-            return(
-              <div className={`${styles.badge} position-absolute badge bg-success`}>
-          {status}
-               </div>
-            );
-          } else {
+            if(gender === "Male"){
+              return(
+                <div className={`${styles.badge} position-absolute badge bg-success`}>
+                   {status = "Vivo"}
+                 </div>
+              );} else if(gender === "Female"){
+                  return(
+                    <div className={`${styles.badge} position-absolute badge bg-success`}>
+                       {status = "Viva"}
+                    </div>
+                  );} else{
+                      return(
+                        <div className={`${styles.badge} position-absolute badge bg-primary`}>
+                           {status = "Desconhecido"}
+                        </div>
+                      );}
+          } else{
             return(
               <div className={`${styles.badge} position-absolute badge bg-primary`}>
-          {status}
-               </div>
-            );
-          }
+                 {status = "Desconhecido"}
+              </div>
+            );}
         })()}
       </div>
       ); 
     });
   }
   else {
-    display = "Nenhum Personagem Encontrado!";
+    display = <div className={`${styles.nameLoc} fs-6`}>Nenhum Personagem Encontrado!</div>
   }
   return <>{display}</>;
  

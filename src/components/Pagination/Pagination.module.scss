@@ -1,0 +1,15 @@
+.btn{
+    box-shadow: 1px 3px 6px rgba($color: #319344, $alpha: 0.50);
+}
+
+.nameLoc{
+    color: #fdfdfd;
+    background-color: #181818;
+    border: 1px darken($color: #000000, $amount: 0)  #12b0c9;
+    border-radius: 5px;
+}
+
+.nameClas{
+    color: #fdfdfd;
+    background-color: #181818;
+}
