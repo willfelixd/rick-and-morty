@@ -2,14 +2,33 @@ import React, { useState, useEffect } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import Logo from "./img/logo.png";
-import Home from "./img/nave.png";
+import Img from "./img/nave.png";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
 import Search from "./components/Search/Search";
+import Navbar from "./components/Navbar/Navbar";
 
-function App() {
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Episodes from "./Pages/Episodes";
+import Location from "./Pages/Location";
+
+function App(){
+  return(
+    <Router>
+        <div className="App">
+        <Navbar />
+        </div>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/episodes" element={<Episodes />} />
+          <Route path="/location" element={<Location />} />
+        </Routes>
+    </Router>
+  )
+}
+const Home = () => {
   let [pageNumber, setPageNumber] = useState(1);
   let [search, setSearch] = useState("");
   let [status, setStatus] = useState("");
@@ -31,9 +50,8 @@ function App() {
 
   return (
     <div style={{ backgroundColor: "#181818" }} className="App">
-      <img src={Logo} alt="Logo" width="80" height="40" title="Logo" />
-      <center className="mt-4 mb-4">
-      <img src={Home} alt="nave" width="230" height="225" title="nave" />
+      <center className="mb-4">
+      <img src={Img} alt="nave" width="230" height="225" title="nave" />
       </center>
 
       <Search setPageNumber={setPageNumber} setSearch={setSearch} />

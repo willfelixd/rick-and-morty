@@ -3,7 +3,6 @@ import styles from "./Filters.module.scss";
 import Gender from "./Category/Gender";
 import Species from "./Category/Species";
 import Status from "./Category/Status";
-import { clear } from "@testing-library/user-event/dist/clear";
 
 const Filters = ({ setStatus, setGender, setSpecies, setPageNumber }) => {
 
