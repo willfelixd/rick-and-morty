@@ -1,7 +1,7 @@
 import React from 'react'
 import FilterBTN from '../FilterBTN'
 
-const Status = ({ setStatus, setPageNumber }) => {
+const Status = ({ setStatus, updatePageNumber }) => {
   let status = ["Alive", "Dead", "Unknown"];
   return (
     <div className="accordion-item">
@@ -15,7 +15,7 @@ const Status = ({ setStatus, setPageNumber }) => {
               {status.map((itens, index) => (
                 <FilterBTN 
                   task={setStatus}
-                  setPageNumber={setPageNumber} 
+                  updatePageNumber={updatePageNumber} 
                   key={index} 
                   name="status" 
                   index={index} 

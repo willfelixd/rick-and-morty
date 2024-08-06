@@ -5,7 +5,7 @@ import styles from "./Cards.module.scss";
 const CardDetails = () => {
     let { id } = useParams();
     let [fetchedData, updateFetchedData] = useState([]);
-    let {name, image, location, origin, gender, species, status, episode} = fetchedData;
+    let {name, image, location, origin, gender, species, status} = fetchedData;
 
     let api = `https://rickandmortyapi.com/api/character/${id}`;
     useEffect (() => {
@@ -18,7 +18,7 @@ const CardDetails = () => {
     return (
         <div style={{ backgroundColor: "#181818" }} className="App d-flex justify-content-center">
             <div className="mt-4 d-flex flex-column gap-3">
-                <h1 className=" text-info text-center">{name}</h1>
+                <h1 className={`${styles.nameCard} fw-bold text-info text-center`}>{name}</h1>
                 <img src={image} alt="" className="img-fluid"/>
 
                 {(() => {

@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./Search.module.scss";
 //import Lupa from "./img/lupa.png";
 
-const Search = ({ setSearch, setPageNumber }) => {
+const Search = ({ setSearch, updatePageNumber }) => {
   return (
     <form className="d-flex justify-content-center gap-4 mb-5">
         <input onChange={(e) => {
-            setPageNumber(1);
+            updatePageNumber(1);
             setSearch(e.target.value);
         }}placeholder="Procurar Personagem" type="text" className={styles.input} />
         <button onClick={(e) => {

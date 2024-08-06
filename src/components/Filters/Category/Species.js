@@ -1,7 +1,7 @@
 import React from 'react'
 import FilterBTN from '../FilterBTN';
 
-const Species = ({ setSpecies, setPageNumber }) => {
+const Species = ({ setSpecies, updatePageNumber }) => {
     let species = [
         "Human",
         "Alien",
@@ -27,7 +27,7 @@ const Species = ({ setSpecies, setPageNumber }) => {
                 {species.map((itens, index) => (
                     <FilterBTN 
                       task={setSpecies}
-                      setPageNumber={setPageNumber}
+                      updatePageNumber={updatePageNumber}
                       key={index} 
                       name="species" 
                       index={index} 

@@ -14,7 +14,7 @@ import Episodes from "./Pages/Episodes";
 import Location from "./Pages/Location";
 import CardDetails from "./components/Cards/CardDetails";
 
-function App(){
+function App() {
   return(
     <Router>
         <div className="App">
@@ -34,7 +34,7 @@ function App(){
   )
 }
 const Home = () => {
-  let [pageNumber, setPageNumber] = useState(1);
+  let [pageNumber, updatePageNumber] = useState(1);
   let [search, setSearch] = useState("");
   let [status, setStatus] = useState("");
   let [gender, setGender] = useState("");
@@ -59,7 +59,7 @@ const Home = () => {
       <img src={Img} alt="nave" width="230" height="225" title="nave" />
       </center>
 
-      <Search setPageNumber={setPageNumber} setSearch={setSearch} />
+      <Search updatePageNumber={updatePageNumber} setSearch={setSearch} />
 
       <div className="container">
         <div className="row">
@@ -67,7 +67,7 @@ const Home = () => {
             setSpecies={setSpecies}
             setGender={setGender} 
             setStatus={setStatus} 
-            setPageNumber={setPageNumber}
+            updatePageNumber={updatePageNumber}
             />
              <div className="col-8">
                <div className="row">
@@ -78,9 +78,9 @@ const Home = () => {
       </div>
 
       <Pagination 
-      info={info} 
-      pageNumber={pageNumber} 
-      setPageNumber={setPageNumber} 
+        info={info}
+        pageNumber={pageNumber}
+        updatePageNumber={updatePageNumber} 
       />
     </div>
   );

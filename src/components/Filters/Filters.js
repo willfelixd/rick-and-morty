@@ -4,13 +4,13 @@ import Gender from "./Category/Gender";
 import Species from "./Category/Species";
 import Status from "./Category/Status";
 
-const Filters = ({ setStatus, setGender, setSpecies, setPageNumber }) => {
+const Filters = ({ setStatus, setGender, setSpecies, updatePageNumber }) => {
 
   let clear =()=>{
     setStatus("");
     setGender("");
     setSpecies("");
-    setPageNumber("");
+    updatePageNumber("");
     window.location.reload(false);
   };
   return (
@@ -22,9 +22,9 @@ const Filters = ({ setStatus, setGender, setSpecies, setPageNumber }) => {
       className="text-center text-info text-decoration-underline mb-3">Limpar Filtros</div>
       
       <div className="accordion" id="accordionExample">
-        <Status setStatus={setStatus} setPageNumber={setPageNumber} />
-        <Species setSpecies={setSpecies} setPageNumber={setPageNumber} />
-        <Gender setGender={setGender} setPageNumber={setPageNumber} /> 
+        <Status setStatus={setStatus} updatePageNumber={updatePageNumber} />
+        <Species setSpecies={setSpecies} updatePageNumber={updatePageNumber} />
+        <Gender setGender={setGender} updatePageNumber={updatePageNumber} /> 
       </div>
     </div>
   )
