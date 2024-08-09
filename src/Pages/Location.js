@@ -38,11 +38,11 @@ const Location = () => {
           <h6 className={`${styles.nameWhite} text-center`}>Tipo : {type === "" ? "Unknown" : type}</h6>
         </div>
         <div className="row">
-          <div className="col-lg-3 col-12 mb-4">
+          <div className="col-lg-3 col-12">
             <h4 className="text-center mb-4 text-info">Escolha a localização</h4>
             <InputGroup setID={setID} name="Localização" total={126} />
           </div>
-          <div className="col-8">
+          <div className="col-lg-8 col-12">
             <div className="row">
               <Cards page="/location/" results={results} />
             </div>

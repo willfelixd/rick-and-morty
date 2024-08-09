@@ -39,7 +39,7 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
         </style>
         <ReactPaginate 
             className={`${styles.nameClas} pagination justify-content-center gap-4 my-4`}
-            forcePage={pageNumber=== 1 ? 0 : pageNumber - 1}
+            forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
             nextLabel={<styles style={{ fontSize: 18 }}>👉🏻</styles>}
             previousLabel={<styles style={{ fontSize: 18 }}>👈🏻</styles>}
             nextClassName={`${styles.btn} btn btn-info`}
